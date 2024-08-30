@@ -2,3 +2,59 @@
     overflow: hidden;
 }
 
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body.chakra-ui-visible {
+    overflow-y: scroll;   
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+    z-index: 2;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: white;
+}
+
+.chakra-ui-dark::-webkit-scrollbar-track {
+    background-image: radial-gradient(
+    circle at center top,
+    rgb(0, 0, 0) 5%,
+    rgb(0, 0, 0) 100%
+    );
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #536dfe;
+    min-height: 90px;
+    max-height: 90px;
+    height: 90px;
+}
+  
+.d-hidden {
+    height: 100vh;
+    overflow: hidden !important;
+    #floating-options {
+        transition: 0s !important;
+        opacity: 0 !important;
+    }
+    @media screen and (min-width: 500px) {
+        margin-inline-end: 8px;
+    }
+}
+
