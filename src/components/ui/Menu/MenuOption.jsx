@@ -3,6 +3,8 @@ import { Link, useMediaQuery, Image } from "@chakra-ui/react";
 
 import MenuItem from "./MenuItem";
 import PageStore from "@src/store/PageStore";
+import FlagSpain from "@src/assets/images/Flag/FlagSpain.png";
+import FlagUS from "@src/assets/images/Flag/FlagUnitedStates.png";
 
 export default function MenuOptions() {
     const [ menuOptions, setMenuOptions ] = useState([]);
@@ -35,7 +37,8 @@ export default function MenuOptions() {
 
     
     useEffect(() => {
-      setMenuOptions(language ? [...english] : [...spanish])        
+      setMenuOptions(language ? [...english] : [...spanish]);
+      setFlag(language ? FlagSpain : FlagUS);
     }, [language]);
 
     return (

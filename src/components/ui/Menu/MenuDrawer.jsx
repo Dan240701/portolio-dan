@@ -9,8 +9,9 @@ import {
     useColorModeValue,
     ModalCloseButton
 } from "@chakra-ui/react";
+import { motion, AnimatePresence } from "framer-motion";
 
-import { IconMenu } from "@assets/icons/Icons";
+import { MenuIcon } from "@assets/icons/Icons";
 
 const MenuOptions = lazy(() => import("./MenuOption"));
 
@@ -55,12 +56,50 @@ export default function MenuDrawer () {
                 fontSize="30px"
                 aria-label="hamburger menu"
             >
-                <IconMenu fill={colorIcon} />
+                <MenuIcon fill={colorIcon} />
             </Button>
             <Drawer placement="left" isOpen={isOpen} onClose={CloseModal}>
                 {isOpen && (
                     <Suspense>
-                        <MenuOptions />
+                        <DrawerOverlay />
+                        <DrawerContent>
+                            <DrawerBody
+                                bg={bgMenuDrawer}
+                            >
+                                <AnimatePresence exitBeforeEnter>
+                                    <ModalCloseButton 
+                                        position = "absolute"
+                                        insetInline = "20px"
+                                        insetBlockStart = "20px"
+                                        variant = "ghost"
+                                        _hover = {{transform: "scale(1.8)", color: "red"}}
+                                        onClick = {CloseModal}
+                                    />
+                                    <motion.div
+                                        onClick={() => {
+                                            CloseModal();
+                                        }}
+                                        style={{
+                                            marginBlockStart: "20vh",
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            marginInlineStart: "4%",
+                                            overflow: "hidden",
+                                            position: "relative",
+                                            width: "fit-content",
+                                            gap: "10px"
+                                        }}
+                                        key={"empty"}
+                                        initial={{opacity: 0, scale: "0"}}
+                                        animate={{opacity: 1, scale: "1.2"}}
+                                        exit={{opacity: 0, scale: "0"}}
+                                        transition={{duration: 1.4, delay: 0.3}}
+                                    >
+                                        <MenuOptions />
+                                    </motion.div>
+                                </AnimatePresence>
+                            </DrawerBody>
+                        </DrawerContent>
                     </Suspense> 
                 )}
             </Drawer>
