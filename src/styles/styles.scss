@@ -1,60 +1,387 @@
 #root {
     overflow: hidden;
-}
-
-body {
+  }
+  
+  body {
     height: 100vh;
     overflow: hidden;
-}
-
-body.chakra-ui-visible {
-    overflow-y: scroll;   
-}
-
-html {
+  }
+  
+  body.chakra-ui-visible {
+    overflow-y: scroll;
+  }
+  
+  html {
     scroll-behavior: smooth;
-}
-
-*::-webkit-scrollbar {
+  }
+  
+  *::-webkit-scrollbar {
     width: 4px;
-}
-
-::-webkit-scrollbar {
+  }
+  
+  ::-webkit-scrollbar {
     width: 10px;
     background-color: transparent;
     z-index: 2;
-}
-
-::-webkit-scrollbar-track {
+  }
+  
+  ::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: white;
-}
-
-.chakra-ui-dark::-webkit-scrollbar-track {
+  }
+  
+  .chakra-ui-dark::-webkit-scrollbar-track {
+    // background-color: rgb(0, 0, 0);
     background-image: radial-gradient(
-    circle at center top,
-    rgb(0, 0, 0) 5%,
-    rgb(0, 0, 0) 100%
+      circle at center top,
+      rgb(0, 0, 0) 5%,
+      rgb(0, 0, 0) 100%
     );
-}
-
-::-webkit-scrollbar-thumb {
+  }
+  
+  ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: #536dfe;
     min-height: 90px;
     max-height: 90px;
     height: 90px;
-}
+  }
   
-.d-hidden {
+  .d-hidden {
     height: 100vh;
     overflow: hidden !important;
     #floating-options {
-        transition: 0s !important;
-        opacity: 0 !important;
+      transition: 0s !important;
+      opacity: 0 !important;
     }
     @media screen and (min-width: 500px) {
-        margin-inline-end: 8px;
+      margin-inline-end: 8px;
     }
-}
-
+  }
+  
+  .opacity-animation {
+    animation: opacity-close-page 1s ease-in-out forwards;
+  }
+  
+  @keyframes opacity-close-page {
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 80px;
+    width: 100vw;
+    inset: 0;
+    z-index: 3;
+  }
+  
+  main > div:not(#floating-options):not(#contact) {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    /* overflow: hidden; */
+    z-index: 2;
+  }
+  
+  main > div:not(#floating-options):not(#start) {
+    @media screen and (min-width: 500px) {
+      padding-block-end: 100px;
+    }
+  }
+  
+  main > div:not(#floating-options):not(:first-child) {
+    padding-inline: 6%;
+  }
+  
+  div:not(#start):target {
+    padding-top: 120px;
+    /* transition: 2s ease-in-out; */
+  }
+  
+  .opacity-1 button:last-child {
+    opacity: 1 !important;
+    transition: opacity 1s ease-in-out !important;
+    display: flex;
+    pointer-events: all !important;
+  }
+  
+  .animation-icon-construction-page circle,
+  .animation-icon-construction-page .path {
+    animation: circle-svg-animation 2.5s alternate infinite ease-in-out;
+  }
+  
+  @keyframes circle-svg-animation {
+    0% {
+      filter: blur(2px);
+      opacity: 0;
+    }
+    60% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  .fixed-header {
+    transition: animate 1s ease-in-out;
+    position: fixed;
+    animation: headerFixedIn forwards 1s ease-in-out;
+    z-index: 4;
+    background: white;
+    box-shadow: -5px -40px 106px -9px;
+  }
+  
+  .none-fixed {
+    transition: 0s ease-in-out !important;
+    background: rgba(0, 0, 0, 0.081) !important;
+    animation: headerFixedIn-reverse 1s ease-in-out forwards;
+  }
+  
+  @keyframes headerFixedIn-reverse {
+    100% {
+      opacity: 0.5;
+      transform: translateY(-100%);
+    }
+  }
+  
+  @keyframes headerFixedIn {
+    0% {
+      opacity: 0.5;
+      transform: translateY(-60%);
+  
+    } 
+  }
+  
+  .tsparticles-canvas {
+    height: 100vh !important;
+    inset: 0;
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+    background-image: radial-gradient(
+      circle at center top,
+      rgba(165, 206, 250, 0.845),
+      white 50%
+    );
+    canvas {
+      z-index: 1;
+      filter: blur(0.5px);
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+  
+  .chakra-ui-dark {
+    .tsparticles-canvas {
+      background-image: radial-gradient(
+        circle at center top,
+        rgb(23, 40, 70),
+        rgb(0, 0, 0),
+        rgb(0, 0, 0) 100%
+      );
+    }
+    // }
+    .fixed-header {
+      background-image: radial-gradient(
+        circle at center top,
+        rgb(28 43 71),
+        rgb(16 14 22) 90%,
+        rgb(0 0 0) 100%
+      );
+    }
+  }
+  
+  #experiencie > div > div:nth-child(odd) {
+    justify-self: end;
+  }
+  
+  @media (max-width: 900px) {
+    main > div:not(#floating-options) {
+      margin-bottom: 50px;
+    }
+    .tsparticles-canvas {
+      // filter: blur(1px);
+      background-image: radial-gradient(
+        circle at center top,
+        rgb(195, 226, 254),
+        #edf2f7 40%
+      );
+    }
+    .chakra-ui-dark .tsparticles-canvas {
+      background-image: radial-gradient(
+        circle at center top,
+        #536dfe65,
+        rgb(0, 0, 0) 100%
+      );
+    }
+  }
+  
+  #skills .grid-template div:hover > svg {
+    fill: white;
+    transform: scale(1.3);
+    filter: blur(6px);
+  }
+  
+  #modal-project {
+    isolation: isolate;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      content: "";
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      opacity: 0.9;
+      z-index: -1;
+      position: absolute;
+    }
+  }
+  
+  .opacity-0-modal {
+    transition: 1s ease-in-out;
+    opacity: 0 !important;
+    & > div {
+      transition: 1s ease-in-out;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  }
+  
+  html body #root .visible-content {
+    overflow-y: auto;
+    height: auto;
+    min-height: 700vh;
+  }
+  
+  .opacity-1-element {
+    opacity: 1 !important;
+  }
+  
+  .opacity-1-canvas .tsparticles-canvas {
+    //  canvas{
+    //   transition: opacity 1s ease-in-out;
+    //  // opacity: 1 !important;
+    //   transition-delay:  5s;
+    //  }
+    @media (max-width: 900px) {
+      canvas {
+        animation: opacity-1-canvas 3s ease-in-out forwards;
+      }
+    }
+    @media (min-width: 900px) {
+      canvas {
+        animation: opacity-1-canvas 2s ease-in-out forwards;
+        animation-delay: 0.5s;
+      }
+    }
+  }
+  
+  @keyframes opacity-1-canvas {
+    70% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    90% {
+      opacity: 0.5;
+      transform: scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  //radial-gradient(circle at center top, rgb(25 39 115 / 40%), rgb(0, 0, 0) 100%)
+  .radial-gradient {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: radial-gradient(
+      circle at center top,
+      rgba(165, 206, 250, 0.845),
+      white 50%
+    );
+    @media (max-width: 900px) {
+      // filter: blur(1px);
+      background-image: radial-gradient(
+        circle at center top,
+        rgb(195, 226, 254),
+        #edf2f7 40%
+      );
+    }
+  }
+  #about {
+    svg {
+      .white {
+        fill: #ddff00;
+      }
+    }
+  }
+  .chakra-ui-dark {
+    .radial-gradient {
+      background-image: radial-gradient(
+        circle at center top,
+        rgb(23, 40, 70),
+        rgb(0, 0, 0),
+        rgb(0, 0, 0) 100%
+      );
+      @media (max-width: 900px) {
+        background-image: radial-gradient(
+          circle at center top,
+          #536dfe65,
+          rgb(0, 0, 0) 100%
+        );
+      }
+    }
+    #about {
+      svg {
+        .sky {
+          fill: #0927cf38;
+        }
+        .white {
+          fill: white;
+        }
+        .cloud{
+          fill: #1d286aa9;
+  
+        }
+      }
+    }
+  }
+   
+  .grid-template {
+    display: grid !important;
+    grid-gap: var(--chakra-space-6);
+    background: rgba(61, 67, 118, 0.41);
+    height: fit-content;
+    width: 100%;
+    padding: var(--chakra-space-10);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .carousel-template {
+    position: relative;
+    width: calc(100% - 20px) !important;
+    gap: 20px;
+    padding-block: 40px;
+    margin-inline: 10px;
+    & > div {
+      position: relative;
+      min-width: 100% !important;
+    }
+  }
+  

@@ -5,6 +5,7 @@ import MenuItem from "./MenuItem";
 import PageStore from "@src/store/PageStore";
 import FlagSpain from "@src/assets/images/Flag/FlagSpain.png";
 import FlagUS from "@src/assets/images/Flag/FlagUnitedStates.png";
+import { ColorModeSwitcher } from "../ColorModeSwitcher/ColorModeSwitcher";
 
 export default function MenuOptions() {
     const [ menuOptions, setMenuOptions ] = useState([]);
@@ -42,7 +43,7 @@ export default function MenuOptions() {
     }, [language]);
 
     return (
-        <div>
+        <>
             {menuOptions.map((option, index) => {
                 return <MenuItem key={index} option={option}/>;
             })}
@@ -62,7 +63,8 @@ export default function MenuOptions() {
               <Image src={flag} h="10px" mx="10px" pointerEvents="none" alt="flag" />
               <span> {desktopView && (language ? "Es" : "En")}</span>
             </Link>
-        </div>
+            <ColorModeSwitcher />
+        </>
         
     )
     

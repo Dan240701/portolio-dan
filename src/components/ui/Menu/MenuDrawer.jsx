@@ -43,7 +43,7 @@ export default function MenuDrawer () {
     };
 
     return (
-        <div>
+        <>
             <Button
                 _hover={{ bg: "none" }}
                 _active={{ bg: "none" }}
@@ -66,10 +66,10 @@ export default function MenuDrawer () {
                             <DrawerBody
                                 bg={bgMenuDrawer}
                             >
-                                <AnimatePresence exitBeforeEnter>
+                                <AnimatePresence wait>
                                     <ModalCloseButton 
                                         position = "absolute"
-                                        insetInline = "20px"
+                                        insetInlineEnd = "20px"
                                         insetBlockStart = "20px"
                                         variant = "ghost"
                                         _hover = {{transform: "scale(1.8)", color: "red"}}
@@ -104,7 +104,7 @@ export default function MenuDrawer () {
                 )}
             </Drawer>
                
-        </div>
+        </>
     )
 
 }

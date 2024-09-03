@@ -1,6 +1,7 @@
 import { useEffect, lazy, Suspense } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import PageStore from "@src/store/PageStore";
+import Content from "./components/Content";
 
 function App() {
   const getStorage = PageStore((state) => state.getStorage);
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <ChakraProvider>
-      
+      <Content />
     </ChakraProvider>
   )
 }
