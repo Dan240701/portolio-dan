@@ -13,7 +13,7 @@ import PageStore from "../../store/PageStore";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function About() {
-    const languague = PageStore((state) => state.languague);
+    const language = PageStore((state) => state.language);
     const principalColor = useColorModeValue("#536DFE", "white");
     const secondColor = useColorModeValue("white", "#3d437669");
     const age = Number(new Date().getFullYear()) - 2000;
@@ -30,7 +30,7 @@ export default function About() {
             {desktopView && <ProfileIcon fontSize={400} mt={100} />}
             <AnimatePresence wait>
                 <motion.div
-                    key={languague ? languague + languague : "empty"}
+                    key={language ? language + language : "empty"}
                     initial={{ y: 10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -10, opacity: 0 }}
@@ -47,32 +47,31 @@ export default function About() {
                             paddingInline={0}
                             textAlign="center"
                         >
-                        {languague ? "About me" : "Acerca de mi"}
+                        {language ? "About me" : "Acerca de mi"}
                         </Text>
                         {!desktopView && <ProfileIcon fontSize={300} my={10} />}
 
                         <Box bg={secondColor} px={10} py={12} mt={10}>
                             <Text textAlign="justify">
-                                {languague
+                                {language
                                 ? ""
                                 : ""}
                             </Text>
                             <Box mt={10}>
                                 <List spacing={3}>
                                     <ListItem>
-                                        {languague ? "Name :" : "Nombre :"} David Enrique Morales
-                                        Cajina
+                                        {language ? "Name :" : "Nombre :"} Cleymer Joel Zavala Tinoco
                                     </ListItem>
                                     <ListItem>
-                                        {languague ? "Age :" : "Edad :"} {age}
+                                        {language ? "Age :" : "Edad :"} {age}
                                     </ListItem>
                                     <ListItem>
-                                        {languague
+                                        {language
                                         ? "Academic level : Graduate  (2018-2023)"
                                         : "Nivel académico : Egresado (2018-2023)"}
                                     </ListItem>
                                     <ListItem>
-                                        {languague
+                                        {language
                                         ? "College career : Information Systems Engineering  "
                                         : "Carrera universitaria :  Ingeniería en Sistemas de la información "}
                                     </ListItem>
@@ -85,7 +84,7 @@ export default function About() {
                                     width="fit-content"
                                     position="relative"
                                     download="Cleymer Joel Zavala Tinoco - CV"
-                                    href={languague ? "CV" : "CV2"}
+                                    href={language ? "CV" : "CV2"}
                                     _hover={{
                                         color: "white",
                                         boxShadow: "0px 0px 10px 1px #536DFE",
@@ -98,7 +97,7 @@ export default function About() {
                                     border="1px solid #536DFE"
                                     borderRadius="4px"
                                 >
-                                    {languague ? "Download CV " : "Descargar CV "}
+                                    {language ? "Download CV " : "Descargar CV "}
                                 </Link>
                             </Box>
                         </Box>

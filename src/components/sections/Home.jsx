@@ -125,12 +125,12 @@ export default function Home() {
                         textShadow={secondShadowText}
                         position="relative"
                         _hover={{
-                          boxShadow: "0px 0px 13px 5px #536DFE",
-                          border: " 1px solid #657cff",
-                          bg: "#536DFE",
-                          borderRadius: "8px",
-                          transform: "scale(1.1)", 
-                          color: "white"
+                            boxShadow: "0px 0px 13px 5px #536DFE",
+                            border: " 1px solid #657cff",
+                            bg: "#536DFE",
+                            borderRadius: "8px",
+                            transform: "scale(1.1)", 
+                            color: "white"
                         }}
                         p="10px 20px"
                         border="1px solid #536DFE"
