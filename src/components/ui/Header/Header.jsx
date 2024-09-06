@@ -8,6 +8,7 @@ const MenuDrawer = lazy(() => import("@src/components/ui/Menu/MenuDrawer"));
 export default function Header() {
     const [desktopView] = useMediaQuery("(min-width: 1000px)");
     const headerRef = useRef(null);
+    
     const changeVisibility = PageStore((state) => state.changeVisibility);
 
     const getSections = () => {
@@ -25,11 +26,14 @@ export default function Header() {
             headerRef.current.classList.remove("fixed-header");
             const main = document.querySelector("main");
             main.style.paddingTop = "0px";
-            
+            const FloatingOptions = document.querySelector("#floating-options");
+            FloatingOptions.classList.remove("opacity-1");
         } else {
             headerRef.current.classList.add("fixed-header");
             const main = document.querySelector("main");
             main.style.paddingTop = "40px";
+            const FloatingOptions = document.querySelector("#floating-options");
+            FloatingOptions.classList.add("opacity-1");
         }
     };
 

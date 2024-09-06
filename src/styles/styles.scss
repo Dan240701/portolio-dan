@@ -271,11 +271,6 @@
   }
   
   .opacity-1-canvas .tsparticles-canvas {
-    //  canvas{
-    //   transition: opacity 1s ease-in-out;
-    //  // opacity: 1 !important;
-    //   transition-delay:  5s;
-    //  }
     @media (max-width: 900px) {
       canvas {
         animation: opacity-1-canvas 3s ease-in-out forwards;

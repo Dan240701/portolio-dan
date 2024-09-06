@@ -5,7 +5,7 @@ const useStore = create((set) => ({
     language: null,
     constructionPageIsVisible: false,
     spinnerIsVisible: true,
-    visibleContent: true,
+    visibleContent: false,
     
     changeLanguage: (value) => {
         set({
@@ -30,6 +30,8 @@ const useStore = create((set) => ({
             if (ln.includes("es")) {
                 language = false;
             }
+            localStorage.setItem("languague", language);
+            languageStore = language;
         }
 
         set({

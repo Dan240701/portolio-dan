@@ -3,6 +3,10 @@ import { Suspense, lazy } from "react";
 
 import PageStore from "@src/store/PageStore";
 import Header from "./ui/Header/Header";
+import FloatingOption from "./ui/FloatingOptions/FloatingOption";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
 
 const Footer = lazy(() => import("@src/components/ui/Footer/Footer"));
 
@@ -21,11 +25,15 @@ export default function Content() {
             <Header />
             <div className="radial-gradient "></div>
             <main>
-                {visibleContent &&(
+                <Home />
+                {visibleContent && (
                     <Suspense>
+                        <About />
+                        <Skills />
                         <Footer />
                     </Suspense>
                 )}
+                <FloatingOption />
             </main>
         </Box>
     )
