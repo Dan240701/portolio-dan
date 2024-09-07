@@ -14,7 +14,6 @@ import {
     CSharpIcon,
     SpringIcon,
     SqlServerIcon,
-    MySqlIcon,
     NodeJsIcon,
     GitIcon
 } 

@@ -9,6 +9,7 @@ import About from "./sections/About";
 
 const Footer = lazy(() => import("@src/components/ui/Footer/Footer"));
 const Skills = lazy(() => import("@src/components/sections/Skills"));
+const Projects = lazy(() => import("@src/components/sections/Projects"));
 
 export default function Content() {
     const bgBody = useColorModeValue("gray.100", "black");
@@ -30,6 +31,7 @@ export default function Content() {
                     <Suspense>
                         <About />
                         <Skills />
+                        <Projects />
                         <Footer />
                     </Suspense>
                 )}
