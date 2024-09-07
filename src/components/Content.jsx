@@ -11,6 +11,7 @@ const Footer = lazy(() => import("@src/components/ui/Footer/Footer"));
 const Skills = lazy(() => import("@src/components/sections/Skills"));
 const Projects = lazy(() => import("@src/components/sections/Projects"));
 const Experiences = lazy(() => import("@src/components/sections/Experiences"));
+const Contact = lazy(() => import("@src/components/sections/Contact"));
 
 export default function Content() {
     const bgBody = useColorModeValue("gray.100", "black");
@@ -34,6 +35,7 @@ export default function Content() {
                         <Skills />
                         <Projects />
                         <Experiences />
+                        <Contact />
                         <Footer />
                     </Suspense>
                 )}
