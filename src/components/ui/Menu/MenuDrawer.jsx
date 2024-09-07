@@ -66,7 +66,7 @@ export default function MenuDrawer () {
                             <DrawerBody
                                 bg={bgMenuDrawer}
                             >
-                                <AnimatePresence wait>
+                                <AnimatePresence mode="wait">
                                     <ModalCloseButton 
                                         position = "absolute"
                                         insetInlineEnd = "20px"

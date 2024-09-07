@@ -28,7 +28,7 @@ export default function About() {
             align={desktopView ? "space-between" : "center"}
         >
             {desktopView && <ProfileIcon fontSize={400} mt={100} />}
-            <AnimatePresence wait>
+            <AnimatePresence mode="wait">
                 <motion.div
                     key={language ? language + language : "empty"}
                     initial={{ y: 10, opacity: 0 }}
