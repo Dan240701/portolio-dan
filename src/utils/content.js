@@ -71,3 +71,20 @@ export const projects = [
         type: ["Java", "JavaServer Pages", "Postgres SQL"]
     }
 ]
+
+export const myExperiences = [
+    {
+        year: "2022 - 2024",
+        titleEsp: "",
+        titleEng: "",
+        textEsp : "",
+        textEng: ""
+    },
+    {
+        year: "2018 - 2023",
+        titleEsp: "",
+        titleEng: "",
+        textEsp : "",
+        textEng: ""
+    }
+]
