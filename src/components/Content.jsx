@@ -6,9 +6,9 @@ import Header from "./ui/Header/Header";
 import FloatingOption from "./ui/FloatingOptions/FloatingOption";
 import Home from "./sections/Home";
 import About from "./sections/About";
-import Skills from "./sections/Skills";
 
 const Footer = lazy(() => import("@src/components/ui/Footer/Footer"));
+const Skills = lazy(() => import("@src/components/sections/Skills"));
 
 export default function Content() {
     const bgBody = useColorModeValue("gray.100", "black");

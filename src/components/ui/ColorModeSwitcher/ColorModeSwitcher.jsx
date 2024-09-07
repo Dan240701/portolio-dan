@@ -87,7 +87,6 @@ export const ColorModeSwitcher = () => {
                         >
                             <SwitchIcon fill={fill} />
                         </motion.div>
-                        
                     </Flex>
                 </Tooltip>
             ) : (

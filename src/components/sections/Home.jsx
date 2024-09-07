@@ -51,7 +51,7 @@ export default function Home() {
     
 
     return (
-        <AnimatePresence wait>
+        <AnimatePresence mode="wait">
             <motion.div
                 key={language ? language + language : "empty"}
                 initial={{ y: 10, opacity: 0 }}
