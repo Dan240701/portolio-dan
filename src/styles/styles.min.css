@@ -79,7 +79,6 @@ main > div:not(#floating-options):not(#contact) {
   position: relative;
   min-height: 100vh;
   width: 100vw;
-  /* overflow: hidden; */
   z-index: 2;
 }
 
