@@ -197,7 +197,7 @@ export default function Project() {
                                         )
                                 })}
                             </Flex>
-                            {selectesItem.github && (
+                            {selectesItem.title && (
                                 <Flex
                                     w="100%" 
                                     py="4px" 

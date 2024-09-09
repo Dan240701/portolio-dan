@@ -12,6 +12,8 @@ import {
 } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import {linkWhatsapp} from "../../utils/utils";
+import { WhatsAppIcon } from "@assets/icons/Icons";
 
 export default function Home() { 
     const shadowText = useColorModeValue(
@@ -32,6 +34,10 @@ export default function Home() {
     const [desktopView] = useMediaQuery("(min-width: 700px)");
 
     const principalColor = useColorModeValue("#536DFE", "white");
+
+    const linkW = linkWhatsapp(
+        "Hola, Quisiera más información acerca del servicio"
+    );
 
     useEffect(() => {
         setHello(language ? "Hi! My name is ": "Hola! Mi nombre es ");
@@ -115,7 +121,7 @@ export default function Home() {
                         </Box>
                     </Flex>
                     <Link
-                        href="#"
+                        href={linkW}
                         target="_blank"
                         rel="noreferrer"
                         my="40px"
@@ -137,6 +143,7 @@ export default function Home() {
                         borderRadius="4px"
                         bg={bgLink}
                     >
+                        <WhatsAppIcon fill="currentColor"/>
                         {language ? "Contact me " : "Contáctame "}
                     </Link>
                 </Flex>

@@ -11,6 +11,7 @@ import {
 import { ProfileIcon } from "@assets/icons/Icons";
 import PageStore from "../../store/PageStore";
 import { motion, AnimatePresence } from "framer-motion";
+import CV from "@assets/documents/cv-esp.pdf";
 
 export default function About() {
     const language = PageStore((state) => state.language);
@@ -54,10 +55,10 @@ export default function About() {
                         <Box bg={secondColor} px={10} py={12} mt={10}>
                             <Text textAlign="justify">
                                 {language
-                                ? ""
-                                : ""}
+                                ? "I am deeply engaged and enthusiastic about software development and technology. With a strong aptitude for quick learning, I take pleasure in broadening my expertise in programming and software development. This capability helps me address diverse challenges, and I am eager to test my skills to contribute to the development of projects and solutions."
+                                : "Soy un persona interesada y apasionada tanto del mundo del desarrollo de software como la tecnología. Con una capacidad notable de rápido aprendizaje, disfruto aprendiendo en pro de cultivar un sólido conocimiento en programación y desarrollo de software. Lo que me permite abordar los distintos desafíos, dispuesto a poner apruebas mis habilidades para contribuir en el desarrollo de proyectos y soluciones."}
                             </Text>
-                            <Box mt={10}>
+                            <Box mt={7}>
                                 <List spacing={3}>
                                     <ListItem>
                                         {language ? "Name :" : "Nombre :"} Cleymer Joel Zavala Tinoco
@@ -84,7 +85,7 @@ export default function About() {
                                     width="fit-content"
                                     position="relative"
                                     download="Cleymer Joel Zavala Tinoco - CV"
-                                    href={language ? "CV" : "CV2"}
+                                    href={language ? CV : CV}
                                     _hover={{
                                         color: "white",
                                         boxShadow: "0px 0px 10px 1px #536DFE",
