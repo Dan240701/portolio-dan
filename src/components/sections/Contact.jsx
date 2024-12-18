@@ -47,7 +47,7 @@ export default function Contact() {
         sentTo = language ? "Send to" : " Enviado a : ";
         sentTo += form.name;
         return new Promise((resolve, reject) => {
-        fetch("https://formspree.io/f/xjkbzjlo", {
+        fetch("https://formspree.io/f/xyzyqvqz", {
                     method: "POST",
                     body: formData,
                     headers: {

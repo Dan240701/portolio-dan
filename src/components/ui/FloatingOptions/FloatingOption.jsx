@@ -5,13 +5,13 @@ import { GitHubIcon, LinkedinIcon, ArrowIcon } from "@assets/icons/Icons";
 export default function FloatingOption() { 
     const links = [
         {
-            link: "https://github.com/zcley02",
+            link: "https://github.com/Dan240701",
             icon: GitHubIcon,
             font: 38,
             name: "github"
         },
         {
-            link: "https://www.linkedin.com/in/cleymer-zavala/",
+            link: "https://www.linkedin.com/in/danellson-miranda-stclair-30a32321b/",
             icon: LinkedinIcon,
             font: 28,
             name: "linkedin"

@@ -15,7 +15,10 @@ import {
     SpringIcon,
     SqlServerIcon,
     NodeJsIcon,
-    GitIcon
+    GitIcon,
+    AngularIcon,
+    IonicIcon,
+    PythonIcon,
 } 
 from "../../assets/icons/SkillIcons";
 
@@ -31,15 +34,16 @@ export default function Skills(){
         {name: "HTML", icon: HtmlIcon},
         {name: "CSS", icon: CssIcon},
         {name: "JavaScript", icon: JsIcon},
+        {name: "Angular", icon: AngularIcon},
         {name: "React JS", icon: ReactIcon},
         {name: "Node JS", icon: NodeJsIcon},
-        {name: "Java", icon: JavaIcon},
+        {name: "Ionic", icon: IonicIcon},
         {name: "Spring Boot", icon: SpringIcon},
         {name: "C#", icon: CSharpIcon},
-        {name: "Oracle / PL-SQL", icon: OracleIcon},
         {name: "Postgres SQL", icon: PostgresIcon},
-        {name: "Sql Server / T-SQL", icon: SqlServerIcon},
+        {name: "Python", icon: PythonIcon},
         {name: "Git", icon: GitIcon},
+       
     ]
 
     return (

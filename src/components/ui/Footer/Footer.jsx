@@ -12,7 +12,7 @@ export default function Footer() {
     const language = PageStore((state) => state.language);
 
     useEffect(() => {
-      setRights(!language ? `${year} @ Cleymer Zavala. Todos los derechos reservados` : `${year} @ Cleymer Zavala. All rights reserved`)
+      setRights(!language ? `${year} Danellson Miranda. Todos los derechos reservados` : `${year} Danellson Miranda. All rights reserved`)
     }, [language]);
     
 

@@ -11,5 +11,5 @@ export const linkWhatsapp = (texto) => {
         initLink = "https://api.whatsapp.com";
     }
 
-    return `${initLink}/send?phone=50587034322&text=${texto}`;
+    return `${initLink}/send?phone=50589081637&text=${texto}`;
 };

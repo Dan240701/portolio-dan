@@ -2,6 +2,10 @@ import JournalApp from "@assets/images/projects/journal.png";
 import Service from "@assets/images/projects/service.png";
 import Tree from "@assets/images/projects/tree.png";
 
+
+
+import CourseApp from "@assets/images/projects/aula.png";
+import gesApp from "@assets/images/projects/riesgos.png";
 const react = {
     name: "React Js",
     image: ""
@@ -31,61 +35,97 @@ const jsp = {
     name: "JavaServer Pages",
     image: ""
 }
+const python = {
+    name: "Python",
+    image: ""
+}
+const django = {
+    name: "Django",
+    image: ""
+}
+const PostgresSql = {
+    name: "Postgres SQL",
+    image: ""
+}
+const JavaScript = {
+    name: "JavaScript",
+    image: ""
+}
+const Csharp = {
+    name: "C#",
+    image: ""
+}
 
 export const projects = [
     {
-        title: "Journal App",
-        link: "https://journal-app-zc.netlify.app/",
-        github: "https://github.com/Zcley02/journal-app",
-        gifProject: JournalApp,
-        image: JournalApp ,
+        title: "Courses SPA App",
+        github: "https://github.com/Dan240701/EduLEARN-CS50W2024.git",
+        gifProject: CourseApp,
+        image: CourseApp,
         description: {
             esp: "",
             eng: ""
         },
-        technologies: [react, firebase],
-        type: ["front", "react", "firebase"]
+        technologies: [python, django, PostgresSql, JavaScript],
+        type: ["web-app", "Spa", "Python", "Django", "Postgres SQL", "Bootstrap", "Js", "Rest API"],
     },
     {
-        title: "Express API with Sequelize ORM",
+        title: "Sistema de Votación MT2024",
         github: "",
-        githubBack: "https://github.com/Zcley02/api-sequelize",
+        githubBack: "https://github.com/Dan240701/Votos-MT204.git",
         gifProject: Service,
         image: Service,
         description: {
             esp: "",
             eng: ""
         },
-        technologies: [node, sql],
-        type: ["Node Js", "Express Js", "Postgres SQL"]
+        technologies: [JavaScript, sql, Csharp],
+        type: ["web-app", ".NET framework", "SQL", "Razor templates", "API REST"], 
     },
     {
-        title: "Arboreto Carmelo Palma Website",
-        github: "https://github.com/Zcley02/arboret-carmelo-palma",
-        gifProject: Tree,
-        image: Tree,
+        title: "Sistema de Gestion Empresarial SEES",
+        github: "https://gitfront.io/r/Danellson-Miranda/UsYH7ga9KwxK/SEES-BACKEND/",
+        gifProject: gesApp,
+        image: gesApp,
         description: {
-            esp: "Hola",
-            eng: "Adio"
+            esp: "",
+            eng: ""
         },
-        technologies: [java, sql, jsp],
-        type: ["Java", "JavaServer Pages", "Postgres SQL"]
+        technologies: [python, PostgresSql, django, JavaScript],
+        type: ["web-app", "Python", "Django", "Postgres SQL", "Bootstrap", "Js", "Rest API"],
     }
 ]
 
 export const myExperiences = [
     {
-        year: "2022 - 2024",
+        year: "JUL 2024 - AGO 2024",
         titleEsp: "Desarrolador Jr.",
         titleEng: "Jr Developer",
-        textEsp : "Como Desarrollador Junior en el Instituto Nicaragüense de Seguros y Reaseguros (INISER), me especializo en el mantenimiento, gestión e implementación de procesos para el sistema Acsel/x utilizando Oracle Forms. También me encargo del diseño y mejora de reportes generados con Oracle Reports, facilitando la obtención de información valiosa para los usuarios. En el ámbito de la programación, utilizo Oracle PL/SQL para desarrollar y mantener procesos en objetos de base de datos. Además, tengo experiencia como desarrollador web, realizando mantenimiento y gestión de una página web diseñada con ASP Clásico, Microsoft y Crystal Reports. También gestiono un servicio de API REST desarrollado con Spring Boot.",
-        textEng: "As a Junior Developer at the Instituto Nicaragüense de Seguros y Reaseguros (INISER), I specialize in the maintenance, management, and implementation of processes for the Acsel/x system using Oracle Forms. I am also responsible for designing and improving reports generated with Oracle Reports, facilitating the extraction of valuable information for users. In programming, I use Oracle PL/SQL to develop and maintain processes in database objects. Additionally, I have experience as a web developer, performing maintenance and management of a website designed with Classic ASP, Microsoft technologies, and Crystal Reports. I also manage a REST API service developed with Spring Boot."
+        textEsp : "Diseño y desarrollo de nuevas funcionalidades en los aplicativos web y móviles de la organización haciendo uso de tecnologías como Angular, Java (SpringBoot), e Ionic (Capacitor.js).",
+        textEng: "Design and development of new functionalities in the organization's web and mobile applications using technologies such as Angular, Java (SpringBoot), and Ionic (Capacitor.js)."
     },
     {
-        year: "2018 - 2023",
+        year: "AGO 2022 - JUN 2023",
+        titleEsp: "Analista de sistemas.",
+        titleEng: "System Analyst",
+        textEsp : "Colaboración en la mejora de los sistemas de gestión interna del centro" +
+                    "educativo, incluyendo análisis de datos para optimizar la eficiencia" +
+                    "operativa y la experiencia de usuario.",
+        textEng: "Collaboration in the improvement of the internal management systems of the educational center, including data analysis to optimize operational efficiency and user experience.",
+    },
+    {
+        year: "FEB 2024 – JUN 2024",
+        titleEsp: "Desarollador Web",
+        titleEng: "Web Developer",
+        textEsp : "Implementación del sistema de administración y votación para el evento MT-Nicaragua 2024, utilizando C# .NET Framework, Razor templates, API REST y JavaScript.",
+
+    },
+    {
+        year: "2020 - 2024",
         titleEsp: "Estudiante de Ingenieria en Sistemas de Información",
         titleEng: "Information Systems Engineering Student",
-        textEsp : "Estudie en la Universidad Centroamericana (UCA), donde me prepare profesionalmente en la carrera de Ingeniería en Sistemas de la Información. En el transcurro de mi estadía en la UCA, pude obtener tanto los conocimientos importantes de programación para poder desarrollar mis habilidades y lógica de programación. De igual manera, ser capaz de entender el proceso colaborativo en la diseño, análisis y gestión de proyectos de desarrollo.",
-        textEng: "I studied at the Central American University (UCA), where I received professional training in the field of Information Systems Engineering. During my time at UCA, I acquired essential programming knowledge that allowed me to develop my skills and programming logic. Additionally, I gained an understanding of the collaborative process involved in designing, analyzing, and managing development projects."
-    }
+        textEsp : "Estudie en la Universidad Nacional Autonoma de Nicaragua(UNAN), donde me prepare profesionalmente en la carrera de Ingeniería en Sistemas de la Información. En el transcurro de mi estadía en la UNAN, pude obtener tanto los conocimientos importantes de programación para poder desarrollar mis habilidades y lógica de programación. De igual manera, ser capaz de entender el proceso colaborativo en la diseño, análisis y gestión de proyectos de desarrollo.",
+        textEng: "I studied at the National Autonomous University of Nicaragua (UNAN), where I professionally prepared in the career of Information Systems Engineering. During my stay at the UNAN, I was able to obtain both the important programming knowledge to be able to develop my programming skills and logic. Likewise, be able to understand the collaborative process in the design, analysis, and management of development projects."
+    }, 
+    
 ]

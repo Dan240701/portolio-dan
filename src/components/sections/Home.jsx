@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PageStore from "@src/store/PageStore";
-import { 
+import {
     Flex,
     useMediaQuery,
     Image,
@@ -12,10 +12,10 @@ import {
 } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import {linkWhatsapp} from "../../utils/utils";
+import { linkWhatsapp } from "../../utils/utils";
 import { WhatsAppIcon } from "@assets/icons/Icons";
 
-export default function Home() { 
+export default function Home() {
     const shadowText = useColorModeValue(
         "",
         "white 2px 0px 0px,  #536DFE 0px 0px 12px"
@@ -36,25 +36,23 @@ export default function Home() {
     const principalColor = useColorModeValue("#536DFE", "white");
 
     const linkW = linkWhatsapp(
-        "Hola, Quisiera más información acerca del servicio"
+        "Hola Danellson, me gustaría contactarte."
     );
 
     useEffect(() => {
-        setHello(language ? "Hi! My name is ": "Hola! Mi nombre es ");
+        setHello(language ? "Hi! I´m " : "Hola! Soy  ");
         setStrings(language ? [
-            " Oracle Developer",
             " Web Developer",
-            " Backend Developer",
+            " Fullstack Developer",
             " Developer Jr"
         ] :
-        [
-            " Desarrollador Oracle",
-            " Desarrollador Web",
-            " Programador Backend",
-            " Desarrollador Jr"
-        ])
+            [
+                " Desarrollador Web",
+                " Programador Fullstack",
+                " Desarrollador Jr"
+            ])
     }, [language]);
-    
+
 
     return (
         <AnimatePresence mode="wait">
@@ -65,7 +63,7 @@ export default function Home() {
                 exit={{ y: -10, opacity: 0 }}
                 transition={{ duration: 0.6 }}
                 style={{
-                  margin: 0,
+                    margin: 0,
                 }}
             >
                 <Flex
@@ -96,7 +94,7 @@ export default function Home() {
                         letterSpacing=" .2rem"
                         as="h1"
                     >
-                        Cleymer Zavala
+                        Danellson Miranda
                     </Heading>
                     <Flex
                         gap="10px"
@@ -108,7 +106,7 @@ export default function Home() {
                         </Box>
 
                         <Box color="#536DFE" textShadow={secondShadowText}>
-                            <Typewriter 
+                            <Typewriter
                                 options={{
                                     strings: strings,
                                     autoStart: true,
@@ -116,7 +114,7 @@ export default function Home() {
                                     delay: 150,
                                     deleteSpeed: "100"
                                 }}
-                                
+
                             />
                         </Box>
                     </Flex>
@@ -135,7 +133,7 @@ export default function Home() {
                             border: " 1px solid #657cff",
                             bg: "#536DFE",
                             borderRadius: "8px",
-                            transform: "scale(1.1)", 
+                            transform: "scale(1.1)",
                             color: "white"
                         }}
                         p="10px 20px"
@@ -143,8 +141,8 @@ export default function Home() {
                         borderRadius="4px"
                         bg={bgLink}
                     >
-                        <WhatsAppIcon fill="currentColor"/>
-                        {language ? "Contact me " : "Contáctame "}
+                        <WhatsAppIcon fill="currentColor" />
+                        {language ? "Reach me " : "Contáctame "}
                     </Link>
                 </Flex>
             </motion.div>

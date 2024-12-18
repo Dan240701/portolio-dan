@@ -17,7 +17,7 @@ export default function About() {
     const language = PageStore((state) => state.language);
     const principalColor = useColorModeValue("#536DFE", "white");
     const secondColor = useColorModeValue("white", "#3d437669");
-    const age = Number(new Date().getFullYear()) - 2000;
+    const age = Number(new Date().getFullYear()) - 2003;
     const [desktopView] = useMediaQuery("(min-width: 1000px)");
   
     return (
@@ -61,19 +61,19 @@ export default function About() {
                             <Box mt={7}>
                                 <List spacing={3}>
                                     <ListItem>
-                                        {language ? "Name :" : "Nombre :"} Cleymer Joel Zavala Tinoco
+                                        {language ? "Name :" : "Nombre :"} Danellson Alberto Miranda Stclair
                                     </ListItem>
                                     <ListItem>
                                         {language ? "Age :" : "Edad :"} {age}
                                     </ListItem>
                                     <ListItem>
                                         {language
-                                        ? "Academic level : Graduate  (2018-2023)"
-                                        : "Nivel académico : Egresado (2018-2023)"}
+                                        ? "Academic level : Ended  (2020 - 2024)"
+                                        : "Nivel académico : Finalizado (2020 - 2024)"}
                                     </ListItem>
                                     <ListItem>
                                         {language
-                                        ? "College career : Information Systems Engineering  "
+                                        ? "College career : Software Engineering "
                                         : "Carrera universitaria :  Ingeniería en Sistemas de la información "}
                                     </ListItem>
                                 </List>
@@ -84,7 +84,7 @@ export default function About() {
                                     display="block"
                                     width="fit-content"
                                     position="relative"
-                                    download="Cleymer Joel Zavala Tinoco - CV"
+                                    download="Danellson Miranda - CV"
                                     href={language ? CV : CV}
                                     _hover={{
                                         color: "white",

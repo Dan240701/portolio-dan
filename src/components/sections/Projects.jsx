@@ -218,7 +218,7 @@ export default function Project() {
                                             borderRadius="20px"
                                             href={`${selectesItem.github}`}
                                         >
-                                            Github{" (Front end)"}
+                                            Github{""}
                                         </Link>
                                     )}{" "}
                                     {selectesItem.githubBack && (
